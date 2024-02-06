@@ -1590,6 +1590,42 @@ style: function (feature) {
 				},
 		{
 			group: 'Ocio',
+			title: 'Coffee shop',
+			query: '(nwr["cuisine"="coffee_shop"]({{bbox}});node(w););out meta;',
+			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+style: function (feature) {
+				var key_regex = /^name$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,0,0,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(255,0,0,1)',
+					width: 1
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+							src: imgSrc + 'icones/maxspeed_empty.svg',
+							scale:0.03
+						}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+				},
+		{
+			group: 'Ocio',
 			title: 'Dunkin` Coffee',
 			query: '(nwr["brand:wikidata"="Q847743"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/dunkin.jpg',
@@ -2787,6 +2823,42 @@ style: function (feature) {
 				},
 		{
 			group: 'Cuina/Cocina/Cuisine',
+			title: 'Burger',
+			query: '(nwr["cuisine"="burger"]({{bbox}});node(w););out meta;',
+			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+style: function (feature) {
+				var key_regex = /^name$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,0,0,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(255,0,0,1)',
+					width: 1
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+							src: imgSrc + 'icones/maxspeed_empty.svg',
+							scale:0.03
+						}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+},
+		{
+			group: 'Cuina/Cocina/Cuisine',
 			title: 'Catalan',
 			query: '(nwr["cuisine"="catalan"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
@@ -2820,7 +2892,151 @@ style: function (feature) {
 				});
 				return style;
 			}
+},
+		{
+			group: 'Cuina/Cocina/Cuisine',
+			title: 'Chinese',
+			query: '(nwr["cuisine"="chinese"]({{bbox}});node(w););out meta;',
+			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+style: function (feature) {
+				var key_regex = /^name$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,0,0,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(255,0,0,1)',
+					width: 1
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+							src: imgSrc + 'icones/maxspeed_empty.svg',
+							scale:0.03
+						}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
 				},
+		{
+			group: 'Cuina/Cocina/Cuisine',
+			title: 'Italian',
+			query: '(nwr["cuisine"="italian"]({{bbox}});node(w););out meta;',
+			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+style: function (feature) {
+				var key_regex = /^name$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,0,0,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(255,0,0,1)',
+					width: 1
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+							src: imgSrc + 'icones/maxspeed_empty.svg',
+							scale:0.03
+						}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+				},
+		{
+			group: 'Cuina/Cocina/Cuisine',
+			title: 'Pizzería',
+			query: '(nwr["cuisine"="pizza"]({{bbox}});node(w););out meta;',
+			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+style: function (feature) {
+				var key_regex = /^name$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,0,0,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(255,0,0,1)',
+					width: 1
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+							src: imgSrc + 'icones/maxspeed_empty.svg',
+							scale:0.03
+						}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+},
+		{
+			group: 'Cuina/Cocina/Cuisine',
+			title: 'Regional',
+			query: '(nwr["cuisine"="regional"]({{bbox}});node(w););out meta;',
+			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+style: function (feature) {
+				var key_regex = /^name$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,0,0,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(255,0,0,1)',
+					width: 1
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+							src: imgSrc + 'icones/maxspeed_empty.svg',
+							scale:0.03
+						}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+},
 		{
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Spanish',
