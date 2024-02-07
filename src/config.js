@@ -182,7 +182,7 @@ var config = {
 {
 			group: 'Alimentación',
 			title: 'Supermercados',
-			query: '(nwr["shop"="supermarket"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"supermarket"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -219,7 +219,7 @@ style: function (feature) {
 		{
 			group: 'Deportes',
 			title: 'Alimentación deportiva',
-			query: '(nwr["shop"="health_food"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"health_food"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -256,7 +256,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Colmados-Ultramarinos',
-			query: '(nwr["shop"="convenience"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"convenience"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -329,7 +329,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Congelados',
-			query: '(nwr["shop"="frozen_food"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"frozen_food"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -365,7 +365,7 @@ style: function (feature) {
 		{
 			group: 'Deportes',
 			title: 'Suplementos alimenticios',
-			query: '(nwr["shop"="nutrition_supplements"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"nutrition_supplements"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -401,7 +401,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Pastelería',
-			query: '(nwr["shop"="pastry"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"pastry"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -437,7 +437,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Gourmet',
-			query: '(nwr["shop"="deli"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"deli"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -473,7 +473,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Bebidas',
-			query: '(nwr["shop"="beverages"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"beverages"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -509,7 +509,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Confitería',
-			query: '(nwr["shop"="confectionery"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"confectionery"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -545,7 +545,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Panadería',
-			query: '(nwr["shop"="bakery"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"bakery"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -581,7 +581,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Café',
-			query: '(nwr["shop"="coffee"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"coffee"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -618,7 +618,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Té',
-			query: '(nwr["shop"="tea"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"tea"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -654,7 +654,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Carnicería',
-			query: '(nwr["shop"="butcher"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"butcher"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -690,7 +690,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Jamón',
-			query: '(nwr["shop"="ham"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"ham"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -726,7 +726,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Quesería',
-			query: '(nwr["shop"="cheese"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"cheese"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -762,7 +762,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Chocolate',
-			query: '(nwr["shop"="chocolate"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"chocolate"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -798,7 +798,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Frutería-Verdulería',
-			query: '(nwr["shop"="greengrocer"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"greengrocer"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -834,7 +834,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Licorería',
-			query: '(nwr["shop"="alcohol"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"alcohol"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -870,7 +870,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Vino',
-			query: '(nwr["shop"="wine"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"wine"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -906,7 +906,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Agua',
-			query: '(nwr["shop"="water"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"water"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -942,7 +942,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Lechería',
-			query: '(nwr["shop"="dairy"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"dairy"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -978,7 +978,7 @@ style: function (feature) {
 		{
 			group: 'Alimentación',
 			title: 'Pescadería',
-			query: '(nwr["shop"="seafood"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"seafood"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1012,9 +1012,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Pícnic',
-			query: '(nwr["tourism"="picnic_site"]({{bbox}});node(w););out meta;',
+			query: '(nwr["tourism"~"picnic_site"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1048,9 +1048,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Pícnic (mesa)',
-			query: '(nwr["leisure"="picnic_table"]({{bbox}});node(w););out meta;',
+			query: '(nwr["leisure"~"picnic_table"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1085,9 +1085,9 @@ style: function (feature) {
 				},
 
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Tienda helados',
-			query: '(nwr["shop"="ice_cream"]({{bbox}});node(w););out meta;',
+			query: '(nwr["shop"~"ice_cream"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1121,9 +1121,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Biergarten',
-			query: '(nwr["amenity"="biergarten"]({{bbox}});node(w););out meta;',
+			query: '(nwr["amenity"~"biergarten"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1157,9 +1157,9 @@ style: function (feature) {
 			}
 		},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Restaurantes',
-			query: '(nwr["amenity"="restaurant"]({{bbox}});node(w););out meta;',
+			query: '(nwr["amenity"~"restaurant"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1193,9 +1193,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: '100 Montaditos',
-			query: '(nwr["brand:wikidata"="Q8355805"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q8355805"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/100montaditos.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1229,9 +1229,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'BuenasMigas',
-			query: '(nwr["brand:wikidata"="Q115258266"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q115258266"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/buenasmigas.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1265,9 +1265,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Carl`s Jr.',
-			query: '(nwr["brand:wikidata"="Q1043486"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q1043486"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/carlsjr.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1301,9 +1301,9 @@ style: function (feature) {
 			}
 },
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Foster`s Hollywood',
-			query: '(nwr["brand:wikidata"="Q5864366"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q5864366"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/fosters_hollywood.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1337,9 +1337,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Goiko Grill',
-			query: '(nwr["name"="Goiko Grill"]({{bbox}});node(w););out meta;',
+			query: '(nwr["name"~"Goiko Grill"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/goiko.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1373,9 +1373,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Ginos',
-			query: '(nwr["brand:wikidata"="Q98503664"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q98503664"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/ginos.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1409,9 +1409,9 @@ style: function (feature) {
 			}
 },
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'La Sureña',
-			query: '(nwr["brand:wikidata"="Q5763573"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q5763573"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/lasurena.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1445,9 +1445,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Lizarran',
-			query: '(nwr["brand:wikidata"="Q1866620"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q1866620"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/lizarran.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1481,9 +1481,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Mister Noodles',
-			query: '(nwr["name"="Mister Noodles"]({{bbox}});node(w););out meta;',
+			query: '(nwr["name"~"Mister Noodles"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/mister_noodles.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1517,9 +1517,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Sitio para comer',
-			query: '(nwr["amenity"="food_court"]({{bbox}});node(w););out meta;',
+			query: '(nwr["amenity"~"food_court"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1553,9 +1553,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Cafés',
-			query: '(nwr["amenity"="cafe"]({{bbox}});node(w););out meta;',
+			query: '(nwr["amenity"~"cafe"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1589,9 +1589,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Coffee shop',
-			query: '(nwr["cuisine"="coffee_shop"]({{bbox}});node(w););out meta;',
+			query: '(nwr["cuisine"~"coffee_shop"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1625,9 +1625,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Dunkin` Coffee',
-			query: '(nwr["brand:wikidata"="Q847743"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q847743"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/dunkin.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1661,9 +1661,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Granier',
-			query: '(nwr["brand:wikidata"="Q102311169"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q102311169"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/granier.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1698,9 +1698,9 @@ style: function (feature) {
 
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Starbucks',
-			query: '(nwr["brand:wikidata"="Q37158"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q37158"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/starbucks.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1736,7 +1736,7 @@ style: function (feature) {
 		{
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Sandwich',
-			query: '(nwr["cuisine"="sandwich"]({{bbox}});node(w););out meta;',
+			query: '(nwr["cuisine"~"sandwich"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1770,9 +1770,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Comida rápida',
-			query: '(nwr["amenity"="fast_food"]({{bbox}});node(w););out meta;',
+			query: '(nwr["amenity"~"fast_food"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1806,9 +1806,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Burger King',
-			query: '(nwr["brand:wikidata"="Q177054"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q177054"]({{bbox}});node(w););out meta;',
 			iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/220px-Burger_King_2020.svg.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1843,9 +1843,9 @@ style: function (feature) {
 
 	},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'McDonald`s',
-			query: '(nwr["brand:wikidata"="Q38076"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q38076"]({{bbox}});node(w););out meta;',
 			iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/220px-McDonald%27s_Golden_Arches.svg.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1879,9 +1879,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Pans & Company',
-			query: '(nwr["brand:wikidata"="Q11697586"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q11697586"]({{bbox}});node(w););out meta;',
 			iconSrc: 'https://www.pansandcompany.com/bundles/pans/images/logo.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1915,9 +1915,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Rodilla',
-			query: '(nwr["brand:wikidata"="Q7356777"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q7356777"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/rodilla.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1951,9 +1951,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'SandwiChez',
-			query: '(nwr["name"="SandwiChez"]({{bbox}});node(w););out meta;',
+			query: '(nwr["name"~"SandwiChez"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/sandwichez.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -1987,9 +1987,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Subway',
-			query: '(nwr["brand:wikidata"="Q244457"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q244457"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/subway.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2023,9 +2023,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'KFC',
-			query: '(nwr["brand:wikidata"="Q524757"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q524757"]({{bbox}});node(w););out meta;',
 			iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/KFC_Logo.svg/220px-KFC_Logo.svg.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2059,9 +2059,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Popeyes',
-			query: '(nwr["brand:wikidata"="Q1330910"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q1330910"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/popeyes.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2096,9 +2096,9 @@ style: function (feature) {
 				},
 
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Taco Bell',
-			query: '(nwr["brand:wikidata"="Q752941"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q752941"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/taco_bell.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2132,9 +2132,9 @@ style: function (feature) {
 			}
 },
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Tony Roma`s',
-			query: '(nwr["brand:wikidata"="Q2213883"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q2213883"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/tony_romas.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2168,9 +2168,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'The Good Burger',
-			query: '(nwr["brand:wikidata"="Q20962086"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q20962086"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/thegoodburger.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2204,9 +2204,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'UDON',
-			query: '(nwr["brand:wikidata"="Q115679798"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q115679798"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/udon.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2240,9 +2240,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Viena',
-			query: '(nwr["brand:wikidata"="Q11954717"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q11954717"]({{bbox}});node(w););out meta;',
 			iconSrc: 'https://www.viena.es/wp-content/themes/viena/images/viena-logo.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2276,9 +2276,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Vips',
-			query: '(nwr["brand:wikidata"="Q66087862"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q66087862"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/vips.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2312,9 +2312,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Pizzería',
-			query: '(nwr["cuisine"="pizza"]({{bbox}});node(w););out meta;',
+			query: '(nwr["cuisine"~"pizza"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2348,9 +2348,9 @@ style: function (feature) {
 			}
 },
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Domino`s Pizza',
-			query: '(nwr["brand:wikidata"="Q839466"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q839466"]({{bbox}});node(w););out meta;',
 			iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/220px-Dominos_pizza_logo.svg.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2384,9 +2384,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'La Tagliatella',
-			query: '(nwr["brand:wikidata"="Q113426257"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q113426257"]({{bbox}});node(w););out meta;',
 			iconSrc: 'https://www.amrest-franquicias.com/sites/default/files/logo_tagliatella_clean2x.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2421,9 +2421,9 @@ style: function (feature) {
 				},
 
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Papa John`s',
-			query: '(nwr["brand:wikidata"="Q2759586"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q2759586"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/papa_johns.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2457,9 +2457,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Papizza',
-			query: '(nwr["name"="Papizza"]({{bbox}});node(w););out meta;',
+			query: '(nwr["name"~"Papizza"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/papizza.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2493,9 +2493,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Pizzeria Carlos',
-			query: '(nwr["name"="Pizzeria Carlos"]({{bbox}});node(w););out meta;',
+			query: '(nwr["name"~"Pizzeria Carlos"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/pizzeria_carlos.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2529,9 +2529,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Pizza Hut',
-			query: '(nwr["brand:wikidata"="Q191615"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q191615"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/pizza_hut.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2565,9 +2565,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Pizza Tutto',
-			query: '(nwr["brand:wikidata"="Q72115627"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q72115627"]({{bbox}});node(w););out meta;',
 			iconSrc: 'src/img/logos/pizza_tutto.jpg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2601,9 +2601,9 @@ style: function (feature) {
 			}
 },
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Telepizza',
-			query: '(nwr["brand:wikidata"="Q2699863"]({{bbox}});node(w););out meta;',
+			query: '(nwr["brand:wikidata"~"Q2699863"]({{bbox}});node(w););out meta;',
 			iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Logo_telepizza.svg/220px-Logo_telepizza.svg.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2637,9 +2637,9 @@ style: function (feature) {
 			}
 				},		
 				{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Bares',
-			query: '(nwr["amenity"="pub"]({{bbox}});node(w););out meta;',
+			query: '(nwr["amenity"~"pub"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2673,9 +2673,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Pubs',
-			query: '(nwr["amenity"="bar"]({{bbox}});node(w););out meta;',
+			query: '(nwr["amenity"~"bar"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2709,9 +2709,9 @@ style: function (feature) {
 			}
 				},
 		{
-			group: 'Ocio',
+			group: 'Type/Tipo/Tipus',
 			title: 'Terrazas',
-			query: '(nwr["leisure"="outdoor_seating"]({{bbox}});node(w););out meta;',
+			query: '(nwr["leisure"~"outdoor_seating"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2860,7 +2860,7 @@ style: function (feature) {
 		{
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Burger',
-			query: '(nwr["cuisine"="burger"]({{bbox}});node(w););out meta;',
+			query: '(nwr["cuisine"~"burger"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2896,7 +2896,7 @@ style: function (feature) {
 		{
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Catalan',
-			query: '(nwr["cuisine"="catalan"]({{bbox}});node(w););out meta;',
+			query: '(nwr["cuisine"~"catalan"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2932,7 +2932,7 @@ style: function (feature) {
 		{
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Chinese',
-			query: '(nwr["cuisine"="chinese"]({{bbox}});node(w););out meta;',
+			query: '(nwr["cuisine"~"chinese"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -2968,7 +2968,7 @@ style: function (feature) {
 		{
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Italian',
-			query: '(nwr["cuisine"="italian"]({{bbox}});node(w););out meta;',
+			query: '(nwr["cuisine"~"italian"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -3004,7 +3004,7 @@ style: function (feature) {
 		{
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Pizzería',
-			query: '(nwr["cuisine"="pizza"]({{bbox}});node(w););out meta;',
+			query: '(nwr["cuisine"~"pizza"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -3040,7 +3040,7 @@ style: function (feature) {
 		{
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Regional',
-			query: '(nwr["cuisine"="regional"]({{bbox}});node(w););out meta;',
+			query: '(nwr["cuisine"~"regional"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -3076,7 +3076,7 @@ style: function (feature) {
 		{
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Spanish',
-			query: '(nwr["cuisine"="spanish"]({{bbox}});node(w););out meta;',
+			query: '(nwr["cuisine"~"spanish"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -3112,7 +3112,7 @@ style: function (feature) {
 		{
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Tapas',
-			query: '(nwr["cuisine"="tapas"]({{bbox}});node(w););out meta;',
+			query: '(nwr["cuisine"~"tapas"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
