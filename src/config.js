@@ -3047,8 +3047,8 @@ style: function (feature) {
 				var key_regex = /^name$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
-				var key_regex2 = /^cuisine$/;
-				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2";
+				var key_regex2 = /^cuisine$/
+				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
 				var name2 = feature.get(name_key2) || '';
 				var fill = new ol.style.Fill({
 					color: 'rgba(255,0,0,0.4)'
@@ -3068,10 +3068,10 @@ style: function (feature) {
 								offsetY : -12,
 								fill: new ol.style.Fill({
                             color: 'rgba(0,0,0,1)'
-                        }),
-							text: new ol.style.Text({
-								text: name2,
-								offsetX : 20,
+                        
+						text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
 								offsetY : -12,
 								fill: new ol.style.Fill({
                             color: 'rgba(0,0,0,1)'
