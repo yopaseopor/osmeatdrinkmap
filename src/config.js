@@ -3718,7 +3718,7 @@ style: function (feature) {
 		complete.append($('<a>').css('marginLeft', 5).attr({title: 'Alimentación infantil', href: 'https://mapcomplete.org/index.html?z=' + view.getZoom() +'&lat='+ coordinateLL[1] +'&lon='+ coordinateLL[0] +'&userlayout=https%3A%2F%2Fraw.githubusercontent.com%2Fyopaseopor%2Fmcquests%2Fmain%2Fbabyfeeding.json&language=en#welcome', target: '_blank'}).html($('<img>').attr({src:'https://raw.githubusercontent.com/yopaseopor/osmbabymap/main/src/img/icones/babyfeeding.svg', height: 20, width: 20})));
 		
 		//Mapcomplete dietes
-		complete.append($('<a>').css('marginLeft', 5).attr({title: 'Dietas', href: 'https://mapcomplete.org/index.html?z=' + view.getZoom() +'&lat='+ coordinateLL[1] +'&lon='+ coordinateLL[0] +'&userlayout=https%3A%2F%2Fraw.githubusercontent.com%2Fyopaseopor%2Fmcquests%2Fmain%2Fdiets.json&language=en#welcome', target: '_blank'}).html($('<img>').attr({src:'https://raw.githubusercontent.com/yopaseopor/osmeatdrinkmap/main/src/img/icones_web/osmeatdrinkmap_logo.svg', height: 20, width: 20})));
+		complete.append($('<a>').css('marginLeft', 5).attr({title: 'Dietas', href: 'https://mapcomplete.org/index.html?z=' + view.getZoom() +'&lat='+ coordinateLL[1] +'&lon='+ coordinateLL[0] +'&userlayout=https%3A%2F%2Fraw.githubusercontent.com%2Fyopaseopor%2Fmcquests%2Fmain%2Fdiets.json&language=en#welcome', target: '_blank'}).html($('<img>').attr({src:'https://raw.githubusercontent.com/yopaseopor/osmeatdrinkmap/main/src/img/icones_web/osmeatdrink_logo.svg', height: 20, width: 20})));
 		
 		
 		
