@@ -220,38 +220,72 @@ style: function (feature) {
 			group: 'Dieta/Diet',
 			title: 'Vegetarià/Vegetariano/Vegetarian',
 			query: '(nwr["diet:vegetarian"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/vegetarian_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:vegetarian$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:vegetarian': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/vegetarian_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [1,0],
+scale: 0.50
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/vegetarian_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [1,0],
+scale: 0.50
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/vegetarian_no.svg',
+rotation:3.14,
+rotateWithView: false,
+anchor: [-1,0],
+scale: 0.50
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'Vegà/Vegano/Vegan',
