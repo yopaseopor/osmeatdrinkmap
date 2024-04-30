@@ -231,7 +231,7 @@ image: new ol.style.Icon({
 src: imgSrc + 'icones/vegetarian_yes.svg',
 rotation:0,
 rotateWithView: false,
-anchor: [0.25,0],
+anchor: [0.1,0],
 scale: 0.05
 }),
 text: new ol.style.Text({
@@ -249,7 +249,7 @@ image: new ol.style.Icon({
 src: imgSrc + 'icones/vegetarian_only.svg',
 rotation:0,
 rotateWithView: false,
-anchor: [0.25,0],
+anchor: [0.1,0],
 scale: 0.05
 }),
 text: new ol.style.Text({
@@ -267,7 +267,7 @@ image: new ol.style.Icon({
 src: imgSrc + 'icones/vegetarian_no.svg',
 rotation:0,
 rotateWithView: false,
-anchor: [0.25,0],
+anchor: [0.1,0],
 scale: 0.05
 })
 })
