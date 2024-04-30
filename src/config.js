@@ -290,506 +290,982 @@ return null;
 			group: 'Dieta/Diet',
 			title: 'Vegà/Vegano/Vegan',
 			query: '(nwr["diet:vegan"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/vegan_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:vegan$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:vegan': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/vegan_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/vegan_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/vegan_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'Halal',
 			query: '(nwr["diet:halal"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/halal_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:halal$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:halal': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/halal_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/halal_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/halal_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'Kosher',
 			query: '(nwr["diet:kosher"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/vegetarian_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:kosher$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:kosher': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/kosher_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/kosher_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/kosher_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'Celiaquia/Gluten free',
 			query: '(nwr["diet:gluten_free"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/gluten_free_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:gluten_free$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:gluten_free': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/gluten_free_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/gluten_free_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/gluten_free_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'Carn/Carne/Meat',
 			query: '(nwr["diet:meat"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/meat_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:meat$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:meat': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/meat_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/meat_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/meat_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'No vegeterià/No vegetariano/No vegetarian',
 			query: '(nwr["diet:non-vegetarian"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/non_vegetarian_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:non-vegetarian$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:non-vegetarian': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/non_vegetarian_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/non_vegetarian_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/non_vegetarian_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'Lliure de/Libre de lactosa/Lactose free',
 			query: '(nwr["diet:lactose_free"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/lactose_free_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:lactose_free$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:lactose_free': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/lactose_free_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/lactose_free_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/lactose_free_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'Peixetarià/Pescetariano/Pescetarian',
 			query: '(nwr["diet:pescetarian"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/pescetarian_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:pescetarian$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:pescetarian': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/pescetarian_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/pescetarian_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/pescetarian_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'No làctics/No lácticos/Dairy free',
 			query: '(nwr["diet:dairy_free"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/vegetarian_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:dairy_free$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:dairy_free': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/dairy_free_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/dairy_free_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/dairy_free_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'No sucre/No azúcar/Sugar free',
 			query: '(nwr["diet:sugar_free"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/sugar_free_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:sugar_free$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:sugar_free': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/sugar_free_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/sugar_free_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/sugar_free_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'Lactovegetarià/Lactovegetariano/Lactovegetarian',
 			query: '(nwr["diet:lacto_vegetarian"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/lacto_vegetarian_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:lacto_vegetarian$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:lacto_vegetarian': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/lacto_vegetarian_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/lacto_vegetarian_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/lacto_vegetarian_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'Ovovegetarià/Ovovegetariano/Ovovegetarian',
 			query: '(nwr["diet:ovo_vegetarian"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/ovo_vegetarian_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:vegetarian$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:ovo_vegetarian': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/ovo_vegetarian_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/ovo_vegetarian_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/ovo_vegetarian_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'Només fruita/Sólo fruta/Fruitarian',
 			query: '(nwr["diet:fruitarian"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/fruitarian_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:fruitarian$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-				},
+var name = feature.get('name') || '';
+var styles = {
+'diet:fruitarian': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/fruitarian_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/fruitarian_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/fruitarian_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Dieta/Diet',
 			title: 'Cru/Crudo/Raw',
 			query: '(nwr["diet:raw"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/raw_yes.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^diet:raw$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
+var name = feature.get('name') || '';
+var styles = {
+'diet:raw': {
+'yes':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/raw_yes.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'only':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/raw_only.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+}),
+text: new ol.style.Text({
+text: name,
+font: 'small-caps bold 10px/1 sans-serif',
+offsetX : 80,
+offsetY : -4,
+fill: new ol.style.Fill({
+color: 'rgba(0,0,0,1)'
+})
+})
+}),
+'no':  new ol.style.Style({
+image: new ol.style.Icon({
+src: imgSrc + 'icones/raw_no.svg',
+rotation:0,
+rotateWithView: false,
+anchor: [0.1,0],
+scale: 0.05
+})
+})
+}
+};
+for (var key in styles) {
+var value = feature.get(key);
+if (value !== undefined) {
+for (var regexp in styles[key]) {
+if (new RegExp(regexp).test(value)) {
+return styles[key][regexp];
+}
+}
+}
+}
+return null;
+}
+},
 		{
 			group: 'Deportes',
 			title: 'Alimentación deportiva',
