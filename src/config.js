@@ -1267,6 +1267,42 @@ return null;
 }
 },
 		{
+			group: 'Dieta/Diet',
+			title: 'No info dieta/No diet info <br> <a href="https://mapcomplete.org/index.html?z=10.433&lat=41.71367263907848&lon=1.8355665646894066&userlayout=https%3A%2F%2Fraw.githubusercontent.com%2Fyopaseopor%2Fmcquests%2Fmain%2Fdiets.json&language=en#welcome"Completa-ho/Complétalo/Complete it</a>',
+			query: '(nwr["amenity"~"restaurant"][!"^diet"]({{bbox}});nwr["amenity"~"cafe"][!"^diet"]({{bbox}});nwr["amenity"~"fast_food"][!"^diet"]({{bbox}});nwr["amenity"~"bar"][!"^diet"]({{bbox}});nwr["amenity"~"pub"][!"^diet"]({{bbox}});nwr["shop"~"convenience"][!"^diet"]({{bbox}});nwr["shop"~"supermarket"][!"^diet"]({{bbox}});node(w););out meta;',
+			iconSrc: imgSrc + 'icones/no_diet.svg',
+			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+style: function (feature) {
+				var key_regex = /^name$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,0,0,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(255,0,0,1)',
+					width: 1
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+							src: imgSrc + 'icones/no_diet.svg',
+							scale:0.03
+						}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+		},
+		{
 			group: 'Deportes',
 			title: 'Alimentación deportiva',
 			query: '(nwr["shop"~"health_food"]({{bbox}});node(w););out meta;',
