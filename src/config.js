@@ -1269,7 +1269,7 @@ return null;
 		{
 			group: 'Dieta/Diet',
 			title: 'No info dieta/No diet info <br> <a href="https://mapcomplete.org/index.html?z=10.433&lat=41.71367263907848&lon=1.8355665646894066&userlayout=https%3A%2F%2Fraw.githubusercontent.com%2Fyopaseopor%2Fmcquests%2Fmain%2Fdiets.json&language=en#welcome"Completa-ho/Complétalo/Complete it</a>',
-			query: '(nwr["amenity"~"restaurant"][!"^diet"]({{bbox}});nwr["amenity"~"cafe"][!"^diet"]({{bbox}});nwr["amenity"~"fast_food"][!"^diet"]({{bbox}});nwr["amenity"~"bar"][!"^diet"]({{bbox}});nwr["amenity"~"pub"][!"^diet"]({{bbox}});nwr["shop"~"convenience"][!"^diet"]({{bbox}});nwr["shop"~"supermarket"][!"^diet"]({{bbox}});node(w););out meta;',
+			query: '(nwr["amenity"="restaurant"][!"^diet"]({{bbox}});nwr["amenity"="cafe"][!"^diet"]({{bbox}});nwr["amenity"="fast_food"][!"^diet"]({{bbox}});nwr["amenity"="bar"][!"^diet"]({{bbox}});nwr["amenity"="pub"][!"^diet"]({{bbox}});nwr["shop"="convenience"][!"^diet"]({{bbox}});nwr["shop"="supermarket"][!"^diet"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/no_diet.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
