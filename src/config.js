@@ -3117,7 +3117,7 @@ style: function (feature) {
 			group: 'Marques/Marcas/Brands',
 			title: 'Pans & Company',
 			query: '(nwr["brand:wikidata"~"Q11697586"]({{bbox}});node(w););out meta;',
-			iconSrc: 'https://www.pansandcompany.com/bundles/pans/images/logo.png',
+			iconSrc: 'src/img/logos/pans_company.png',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -3132,7 +3132,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: 'https://www.pansandcompany.com/bundles/pans/images/logo.png',
+							src: 'src/img/logos/pans_company.png',
 							scale:0.10
 						}),
 							text: new ol.style.Text({
