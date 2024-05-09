@@ -2427,7 +2427,7 @@ style: function (feature) {
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'African',
 			query: '(nwr["cuisine"~"african"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/cuisine_african.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -2442,7 +2442,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
+							src: imgSrc + 'icones/cuisine_african.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
@@ -2463,7 +2463,7 @@ style: function (feature) {
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'American',
 			query: '(nwr["cuisine"~"american"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/cuisine_american.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -2478,7 +2478,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
+							src: imgSrc + 'icones/cuisine_american.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
@@ -2499,7 +2499,7 @@ style: function (feature) {
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Arab',
 			query: '(nwr["cuisine"~"arab"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/cuisine_arab.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -2514,7 +2514,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
+							src: imgSrc + 'icones/cuisine_arab.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
@@ -2535,7 +2535,7 @@ style: function (feature) {
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Asian',
 			query: '(nwr["cuisine"~"asian"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/cuisine_asian.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -2550,7 +2550,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
+							src: imgSrc + 'icones/cuisine_asian.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
@@ -2571,7 +2571,7 @@ style: function (feature) {
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Bagel',
 			query: '(nwr["cuisine"~"bagel"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/cuisine_bagel.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -2586,7 +2586,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
+							src: imgSrc + 'icones/cuisine_bagel.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
@@ -2607,7 +2607,7 @@ style: function (feature) {
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Bakery',
 			query: '(nwr["cuisine"~"bakery"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/cuisine_bakery.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -2622,7 +2622,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
+							src: imgSrc + 'icones/cuisine_bakery.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
@@ -2643,7 +2643,7 @@ style: function (feature) {
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Barbecue',
 			query: '(nwr["cuisine"~"barbecue"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/cuisine_barbecue.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -2658,7 +2658,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
+							src: imgSrc + 'icones/cuisine_barbecue.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
@@ -2679,7 +2679,7 @@ style: function (feature) {
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Beef bowl',
 			query: '(nwr["cuisine"~"beef_bowl"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/cuisine_beef_bowl.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -2694,7 +2694,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
+							src: imgSrc + 'icones/cuisine_beef_bowl.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
@@ -2715,7 +2715,7 @@ style: function (feature) {
 			group: 'Cuina/Cocina/Cuisine',
 			title: 'Breakfast',
 			query: '(nwr["cuisine"~"breakfast"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc: imgSrc + 'icones/cuisine_breakfast.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -2730,7 +2730,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
+							src: imgSrc + 'icones/cuisine_breakfast.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
